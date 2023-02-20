@@ -1,0 +1,21 @@
+package Builder2.Director;
+
+import Builder2.Builder.Builder;
+
+public class Director {
+	private Builder builder;
+	
+	public Director(Builder builder) {
+		this.builder = builder;
+	}
+	
+	public String build() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(builder.head());
+		sb.append(builder.body());
+		sb.append(builder.foot());
+		
+		return sb.toString();
+	}
+}
